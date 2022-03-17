@@ -10,5 +10,8 @@
     "test": "sleep 1; echo test"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@demo/ui": "workspace:^1.0.0"
+  }
 }

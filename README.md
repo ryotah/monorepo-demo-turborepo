@@ -10,5 +10,6 @@ pnpm install
 ### Develop
 
 ```sh
-
+# Install a package
+pnpm add <pkg> --filter web-1
 ```
