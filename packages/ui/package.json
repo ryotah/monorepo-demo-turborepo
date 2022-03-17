@@ -1,0 +1,12 @@
+{
+  "name": "@demo/ui",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "build": "sleep 3; tsc; echo build",
+    "lint": "sleep 2; echo lint",
+    "test": "sleep 2; echo test"
+  },
+  "author": "",
+  "license": "MIT"
+}
