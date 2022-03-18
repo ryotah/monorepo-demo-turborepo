@@ -38,6 +38,15 @@ pnpm turbo run test
 # > web-1 test
 # > web-2 test
 
+pnpm turbo run test --since=origin/main
+# (no tasks)
+
+echo "export const foo = 'foo';" >> packages/ui/index.ts
+pnpm turbo run test --since=origin/main
+# > @demo/ui:test
+# > web-1:test
+# https://turborepo.org/docs/reference/command-line-reference#--since
+
 # Install a package
 pnpm add <pkg> --filter web-1
 ```
@@ -55,4 +64,4 @@ pnpm turbo run web-1#deploy --graph=graph_web-1#deploy.png
 
 |`build`|`build --scope=web-1`|`build --scope=web-1 --include-dependencies`|`web-1#deploy`|
 |--|--|--|--|
-|![graph_build.png](https://raw.githubusercontent.com/ryotah/monorepo-demo-turborepo/main/graph_build.png)|![graph_build_scope=web-1.png](https://raw.githubusercontent.com/ryotah/monorepo-demo-turborepo/main/graph_build_scope=web-1.png)|![graph_build_scope=web-1_include-dependencies.png](https://raw.githubusercontent.com/ryotah/monorepo-demo-turborepo/main/graph_build_scope=web-1_include-dependencies.png)|![graph_web-1#deploy.png](https://raw.githubusercontent.com/ryotah/monorepo-demo-turborepo/main/graph_web-1%23deploy.png)|
+|![graph_build.png](https://raw.githubusercontent.com/ryotah/monorepo-demo-turborepo/main/graph_build.png)|![graph_build_scope=web-1.png](https://raw.githubusercontent.com/ryotah/monorepo-demo-turborepo/main/graph_build_scope=web-1.png)|![graph_build_scope=web-1_include-dependencies.png](https://github.com/ryotah/monorepo-demo-turborepo/blob/main/graph_scope=web-1_include-dependencies.png?raw=true)|![graph_web-1#deploy.png](https://raw.githubusercontent.com/ryotah/monorepo-demo-turborepo/main/graph_web-1%23deploy.png)|
